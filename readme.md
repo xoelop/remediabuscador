@@ -45,7 +45,7 @@ Veremos esto
 
 ![](images/savedFirstSelector.png)
 
-Es importante que seleccionemos en el dropdown de type la opción **Pagination**. En Pagination type, el tipo sería **Click multiple times on next/more button**, pero si lo dejamos en **auto** también funcionará.
+Es importante que seleccionemos en el dropdown de type la opción **Pagination**. En Pagination type, el tipo lo dejamos en **auto**. Hay otros tipos disponibles pero en este caso no son necesarios.
 
 ### Encontrar los links de cada mediador
 
