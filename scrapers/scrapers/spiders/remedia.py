@@ -25,12 +25,12 @@ class RemediaSpider(scrapy.Spider):
         "HTTPCACHE_ENABLED": True,
         "HTTPCACHE_DIR": "httpcache",
         "HTTPCACHE_ALWAYS_STORE": True,  # TODO remove to get new data
-        "HTTPCACHE_POLICY": "remediascraper.remediascraper.middlewares.CachePolicy",
+        "HTTPCACHE_POLICY": "scrapers.scrapers.middlewares.CachePolicy",
     }
 
     def start_requests(self):
         # total: 8159 results. 20 per page, so 408 pages in total
-        for i in range(1, 409):
+        for i in range(1, 20):
             url = f"https://remediabuscador.mjusticia.gob.es/remediabuscador/avanzarRetrocederRegistroMediador.action?paginacion.index={i}&nombre=&especialidad=0&area="
             yield scrapy.Request(url=url, callback=self.parse, meta=meta)
 
@@ -67,6 +67,7 @@ class RemediaSpider(scrapy.Spider):
         experience = paragraphs[5].css("::text").getall()[-1][1:].strip()
         mediador = {
             "name": name,
+            'firstName': name.split(' ').title(),
             "address": address,
             "email": email,
             "speciality": speciality,

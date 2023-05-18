@@ -1,4 +1,4 @@
-# Scrapy settings for remediascraper project
+# Scrapy settings for scrapers project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "remediascraper"
+BOT_NAME = "scrapers"
 
-SPIDER_MODULES = ["remediascraper.spiders"]
-NEWSPIDER_MODULE = "remediascraper.spiders"
+SPIDER_MODULES = ["scrapers.spiders"]
+NEWSPIDER_MODULE = "scrapers.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = "remediascraper (+http://www.yourdomain.com)"
+# USER_AGENT = "scrapers (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    "remediascraper.middlewares.RemediascraperSpiderMiddleware": 543,
+#    "scrapers.middlewares.ScrapersscraperSpiderMiddleware": 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    "remediascraper.middlewares.RemediascraperDownloaderMiddleware": 543,
+#    "scrapers.middlewares.ScrapersscraperDownloaderMiddleware": 543,
 # }
 
 DOWNLOADER_MIDDLEWARES = {
@@ -68,7 +68,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    "remediascraper.pipelines.RemediascraperPipeline": 300,
+#    "scrapers.pipelines.ScrapersscraperPipeline": 300,
 # }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

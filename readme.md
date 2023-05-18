@@ -1,6 +1,10 @@
 # Scraping de Remediabuscador
 
 
+## Abrir herramientas de dessarrollador de Chrome
+
+Lo abrimos haciendo click derecho - inspeccionar, o con Control + Shift + C, o cmd+shift+c en mac
+
 ## Scraping con https://www.webscraper.io/
 
 Usaremos un plugin de Chrome, [Webscraper](https://www.webscraper.io/). Hay muchos, este es gratis y nos permite scrapear una cantidad ilimitada de páginas ejecutándolo desde nuestro ordenador. Si queremos usar la versión cloud habría que pagar, pero para nuestro caso no nos hace falta.
@@ -163,7 +167,7 @@ Esto lo conseguiremos con esta sección en `remedia.py`
         "HTTPCACHE_ENABLED": True,
         "HTTPCACHE_DIR": "httpcache",
         "HTTPCACHE_ALWAYS_STORE": True,  # TODO remove to get new data
-        "HTTPCACHE_POLICY": "remediascraper.remediascraper.middlewares.CachePolicy",
+        "HTTPCACHE_POLICY": "scrapers.scrapers.middlewares.CachePolicy",
     }
 ```
 

@@ -21,7 +21,7 @@
                 "runspider",
                 "${file}",
                 "-o",
-                "mediadores.csv"
+                "exportadores.csv"
             ],
             "console": "integratedTerminal"
         }

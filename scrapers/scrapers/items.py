@@ -6,7 +6,7 @@
 import scrapy
 
 
-class RemediascraperItem(scrapy.Item):
+class ScrapersscraperItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
