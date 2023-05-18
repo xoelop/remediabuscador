@@ -1,0 +1,59 @@
+{
+    "_id": "remedia",
+    "startUrl": ["https://remediabuscador.mjusticia.gob.es/remediabuscador/avanzarRetrocederRegistroMediador.action?paginacion.index=1&nombre=&especialidad=0&area="],
+    "selectors": [{
+        "id": "siguiente",
+        "paginationType": "auto",
+        "parentSelectors": ["_root", "siguiente"],
+        "selector": ".movimiento a:contains('Next')",
+        "type": "SelectorPagination"
+    }, {
+        "id": "linkMediador",
+        "multiple": true,
+        "parentSelectors": ["siguiente"],
+        "selector": "[headers='col_01'] a",
+        "type": "SelectorLink"
+    }, {
+        "id": "name",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": ".detallePublicacion p:nth-of-type(1)",
+        "type": "SelectorText"
+    }, {
+        "id": "address",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": "p:nth-of-type(2)",
+        "type": "SelectorText"
+    }, {
+        "id": "email",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": "p:nth-of-type(3)",
+        "type": "SelectorText"
+    }, {
+        "id": "especialidad",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": "p:nth-of-type(4)",
+        "type": "SelectorText"
+    }, {
+        "id": "area",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": "p:nth-of-type(5)",
+        "type": "SelectorText"
+    }, {
+        "id": "exp",
+        "multiple": false,
+        "parentSelectors": ["linkMediador"],
+        "regex": "",
+        "selector": "p:nth-of-type(6)",
+        "type": "SelectorText"
+    }]
+}
